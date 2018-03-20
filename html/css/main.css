@@ -1,0 +1,208 @@
+/* -------------------- Grid -------------------- */
+
+
+main {
+  box-sizing: border-box;
+  padding: 10% 8% 150px 8%;
+  position: absolute;
+  top: 0;
+  transition: all .4s ease;
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  main {
+    padding: 5% 5% 150px 5%;
+    width: 80%;
+  }
+}
+
+@media (min-width: 750px) {
+  main {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1400px) {
+  main {
+    width: 50%;
+  }
+}
+
+
+/* -------------------- Banner -------------------- */
+
+
+a.banner {
+  background-color: #2b2b2b;
+  background-image: none;
+  bottom: 0;
+  box-sizing: border-box;
+  color:#FFF;
+  height: 50px;
+  padding: 16px 8% 0% 8%;
+  position: fixed;
+  transition: all .4s ease;
+  width: 100%;
+}
+
+a.banner:hover {
+  background-color: #009aff;
+  background-image: none;
+  color: #FFF;
+}
+
+@media (min-width: 550px) {
+  a.banner {
+    padding: 16px 5% 0% 5%;
+  }
+}
+
+.pop-up {
+  bottom:-25;  /* push banner off canvas upon start */
+  -webkit-animation:popUp .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1;
+  -moz-animation:popUp .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1;
+  animation:popUp .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1;
+ 
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value */
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes popUp { from {bottom:-25px; } to {bottom:0;} }
+@-moz-keyframes popUp { from {bottom:-25px; } to {bottom:0;} }
+@keyframes popUp { from {bottom:-25px; } to {bottom:0;} }
+
+
+/* -------------------- Base Styles -------------------- */
+
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #FFF;
+  color: #2b2b2b;
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* -------------------- Type -------------------- */
+
+
+h1, h2, p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 { 
+  color: #000;  
+  line-height: 1.3;
+  font-size: 2.0rem;
+  font-weight: 700; 
+  letter-spacing: 0; 
+  margin-bottom: 1.5rem; 
+}
+
+h2 { 
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.6;
+  padding-bottom: 1.6rem;
+}
+
+@media (min-width: 550px) {
+  h1 { font-size: 2.0rem; }
+  h2 { font-size: 1.5rem; }
+  p { font-size: 1.5rem; }
+}
+
+@media (min-width: 750px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.5rem; }
+  p { font-size: 1.5rem; }
+}
+
+@media (min-width: 1000px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.5rem; }
+  p { font-size: 1.5rem; }
+}
+
+
+/* -------------------- Links -------------------- */
+
+
+a {
+  background-image: linear-gradient(to bottom, rgba(28,163,252,0) 93%, #009aff 93%);
+  color:#009aff;
+  transition: all .2s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  background-image: linear-gradient(to bottom, rgba(0,127,210,0) 93%, #007FD2 93%);
+  color: #007FD2;
+  padding-bottom: 1px;
+}
+
+
+/* -------------------- Lightbox -------------------- */
+
+
+.lightbox {
+  /* Default lightbox to hidden */
+  background: #FFF;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+}
+
+.lightbox img {
+  margin-top: 10%;
+  max-width: 90%;
+}
+
+@media (min-width: 550px) {
+  .lightbox img {
+    margin-top: 5%;
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 750px) {
+  .lightbox img {
+    margin-top: 5%;
+    max-width: 50%;
+  }
+}
+
+.lightbox:target {
+  /* Remove default browser outline */
+  outline: none;
+  /* Unhide lightbox */
+  display: block;
+}
+

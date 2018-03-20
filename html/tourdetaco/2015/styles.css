@@ -1,0 +1,129 @@
+
+body {
+	background-image: url("images/whitebrick.jpg");
+	text-align: center;
+	margin: 0 auto;
+	}
+
+@font-face {
+    font-family: univers_lightultracondensed;
+    src: url(fonts/univers_lightultracondensed.otf);
+	}
+
+@font-face {
+    font-family: univers_black;
+    src: url(fonts/univers_black.otf);
+	}
+
+h1 {
+	color:#25262D;
+	font-family: 'univers_lightultracondensed', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 44px;
+	line-height: 44px;
+	letter-spacing:1px;
+	margin: 0px;
+	}
+
+p {
+	color:#25262D;
+	font-family: 'univers_black', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 10px 0px 0px 0px;
+	}
+.startfinish {
+	color: #FFFFFF;
+	background: #FF5D28;
+	font-size: 16px;
+	padding: 7px 7px 7px 7px;
+	position: relative;
+	top: -11px;
+	}
+.topbar {
+	background: #07C1F1;
+	height: 10px;
+	}
+.intro {
+	width: 300px;
+	padding-top: 60px;
+	margin: 0 auto;
+	}
+.details {
+	width: 300px;
+	margin: 0 auto;
+	}
+.route {
+	width: 300px;
+	text-align: center;
+	padding-top: 50px;
+	margin: 0 auto;
+	}
+.joinbtn {
+  	-webkit-border-radius: 3;
+  	-moz-border-radius: 3;
+ 	border-radius: 3px;
+  	font-family: 'univers_black', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  	font-size: 24px;
+  	font-weight: 500;
+  	letter-spacing:4px;
+  	color: #FFFFFF;
+  	background: #07B9E7;
+  	padding: 22px 25px 19px 25px;
+  	text-decoration: none;
+  	line-height: 70px;
+	}
+.joinbtn:hover {
+	background: #07C1F1;
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+.mapbtn {
+  	-webkit-border-radius: 3;
+  	-moz-border-radius: 3;
+ 	border-radius: 3px;
+  	font-family: 'univers_black', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  	font-size: 14px;
+  	font-weight: 500;
+  	letter-spacing:2px;
+  	color: #25262D;
+	border: solid #25262D 2px;
+  	padding: 12px 15px 9px 15px;
+  	text-decoration: none;
+  	line-height: 70px;
+	}
+.mapbtn:hover {
+	background: #07B9E7;
+	color: #FFFFFF;
+	border: solid #07B9E7 2px;
+	text-decoration: none;
+	}
+.foursquarebtn {
+  	-webkit-border-radius: 3;
+  	-moz-border-radius: 3;
+ 	border-radius: 3px;
+  	font-family: 'univers_black', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  	font-size: 14px;
+  	font-weight: 500;
+  	letter-spacing:2px;
+  	color: #25262D;
+  	border: solid #25262D 2px;
+  	padding: 12px 15px 9px 15px;
+  	text-decoration: none;
+  	line-height: 70px;
+  	margin-left: 15px;
+	}
+.foursquarebtn:hover {
+	background: #13B774;
+	color: #FFFFFF;
+	border: solid #13B774 2px;
+	text-decoration: none;
+	}
+.bike {
+	padding: 20px 260px 30px 0px;
+	}
+.music {
+	}
+
+@media screen and (max-width: 600px){
+	audio{display:none;}}
+
