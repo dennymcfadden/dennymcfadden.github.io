@@ -40,7 +40,7 @@ main {
 
 
 a.banner {
-  background-color: #2b2b2b;
+  background-color: #009aff;
   background-image: none;
   bottom: 0;
   box-sizing: border-box;
@@ -53,7 +53,7 @@ a.banner {
 }
 
 a.banner:hover {
-  background-color: #009aff;
+  background-color: #22D290;
   background-image: none;
   color: #FFF;
 }
