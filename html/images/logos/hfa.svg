@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="168px" viewBox="0 0 200 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pantsuit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Buttons" transform="translate(-54.000000, -941.000000)">
+            <g id="Logo" transform="translate(54.000000, 941.000000)">
+                <polyline id="Fill-1" fill="#FFFFFF" points="57.4213439 167.059225 0.504347826 167.059225 0.504347826 111.555002 7.61897233 83.8032754 0.504347826 56.0515491 0.504347826 0.548867475 57.4213439 0.548867475 57.4213439 167.059225"></polyline>
+                <polyline id="Fill-2" fill="#FFFFFF" points="171.255336 167.059225 114.33834 167.059225 121.452964 83.8040463 114.33834 0.548867475 171.255336 0.548867475 171.255336 167.059225"></polyline>
+                <polyline id="Fill-3" fill="#E4002B" points="199.713834 83.8040463 114.33834 0.548867475 114.33834 56.05232 0.504347826 56.05232 0.504347826 111.555773 114.33834 111.555773 114.33834 167.059225 199.713834 83.8040463"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
