@@ -80,7 +80,7 @@ html {
 }
 body {
   background-color: #FFF;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   line-height: 1.6;
   background-color: #000;
@@ -105,7 +105,7 @@ h1 {
 }
 
 h2 { 
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #5a5a5a;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -113,8 +113,8 @@ h2 {
 }
 
 p {
-  font-family: sans-serif;
-  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
+  color: #797979;
   font-size: 1.6rem;
   line-height: 1.6;
   padding-bottom: 1.6rem;
@@ -154,7 +154,7 @@ p {
 
 
 a {
-  color: #5a5a5a;
+  color: #797979;
 }
 
 a:hover {
