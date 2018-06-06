@@ -1,25 +1,5 @@
 /* -------------------- Panels -------------------- */
 
-.left {
-  background-color: #000;
-  color: #fff;
-  padding: 10%;
-}
-
-.right {
-}
-
-@media (min-width: 992px) {
-  .left { 
-    height: 100vh;
-    overflow: scroll;
-  }
-  .right {
-    height: 100vh;
-    overflow: scroll;
-  }
-}
-
 .project {
   height: 0px;
   padding-top: 15%;
@@ -36,14 +16,14 @@
 
 #dnc {
   background-color: #00AEF3;
-  padding-top: 15%;
-  padding-bottom: 65%;
+  padding-top: 25%;
+  padding-bottom: 55%;
 }
 
 #tts {
   background-color: #B5E3C4;
-  padding-top: 17%;
-  padding-bottom: 63%;
+  padding-top: 21%;
+  padding-bottom: 59%;
 }
 
 #arc {
@@ -54,14 +34,14 @@
 
 #hfa {
   background-color: #0157B8;
-  padding-top: 19%;
-  padding-bottom: 61%;
+  padding-top: 23%;
+  padding-bottom: 57%;
 }
 
 #ga {
   background-color: #FF2734;
-  padding-top: 15%;
-  padding-bottom: 65%;
+  padding-top: 21%;
+  padding-bottom: 59%;
 }
 
 #cw {
@@ -72,10 +52,15 @@
 
 #hcs {
   background-color: #400EDD;
-  padding-top: 15%;
-  padding-bottom: 65%;
+  padding-top: 18%;
+  padding-bottom: 62%;
 }
 
+#cf {
+  background-color: #31445E;
+  padding-top: 35%;
+  padding-bottom: 45%;
+}
 
 /* -------------------- Base Styles -------------------- */
 
@@ -95,8 +80,8 @@ body {
 /* -------------------- Type -------------------- */
 
 h1, h2, p {
-  margin-bottom: 0;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -175,13 +160,28 @@ a.contact:hover {
   color: #FFF;
 }
 
+button {
+  background-color: #000;
+  color: #FFF;
+  stroke: none;
+  border: 2px solid #FFF;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+}
+
+button:hover {
+  background-color: #FFF;
+  color: #000;
+}
 
 /* -------------------- Lightbox -------------------- */
 
 
 .lightbox {
   /* Default lightbox to hidden */
-  background: #FFF;
+  background: #000;
   display: none;
   height: 100%;
   left: 0;
@@ -200,14 +200,14 @@ a.contact:hover {
 @media (min-width: 550px) {
   .lightbox img {
     margin-top: 5%;
-    max-width: 70%;
+    max-width: 80%;
   }
 }
 
 @media (min-width: 750px) {
   .lightbox img {
     margin-top: 5%;
-    max-width: 50%;
+    max-width: 70%;
   }
 }
 
