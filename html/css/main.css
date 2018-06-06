@@ -1,5 +1,15 @@
 /* -------------------- Panels -------------------- */
 
+.hero {
+  padding: 10% 5% 15%;
+}
+
+@media (min-width: 550px) {
+  .hero {
+    padding: 10% 10% 15%;
+  }
+}
+
 .project {
   height: 0px;
   padding-top: 15%;
@@ -160,18 +170,19 @@ a.contact:hover {
   color: #FFF;
 }
 
-button {
+.button {
   background-color: #000;
   color: #FFF;
   stroke: none;
   border: 2px solid #FFF;
   text-transform: uppercase;
+  text-decoration: none;
   padding: 8px 15px;
   font-size: 1.5rem;
   letter-spacing: .2rem;
 }
 
-button:hover {
+.button:hover {
   background-color: #FFF;
   color: #000;
 }
