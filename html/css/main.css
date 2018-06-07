@@ -17,6 +17,11 @@
   text-align: center;
 }
 
+.socialicon {
+  padding-left: 20px;
+  float: right;
+}
+
 #hero {
   padding: 10%;
   display: flex;
