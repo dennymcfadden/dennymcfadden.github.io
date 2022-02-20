@@ -3,7 +3,7 @@
 <head>
   <!-- Basic Page Needs -->
   <meta charset="utf-8">
-  <title>Denny.NYC</title>
+  <title>Denny.NYC - Taptap Send</title>
   <meta name="description" content="Denny McFadden - Digital Product Designer based in New York City.">
   <meta name="author" content="Denny McFadden">
   <!-- Mobile Specific Metas -->
@@ -32,58 +32,71 @@
 			<h2 class="text-blue text-bold">2018</h2>	
 			<h1>Taptap Send</h1>	
 		</div>
-		<div class="row" style="margin-top: 5rem; background-color: #B6E4C5;">
+		<div class="col-12 col-md-8 offset-md-2">
+			<p>In recent years, telecom-based debit accounts (aka "<a href="https://www.economist.com/special-report/2018/05/03/how-mobile-money-is-spreading" target="_blank">mobile money</a>") have become the predominant banking system for people living in emerging markets. However, transferring money from traditional financial institutions to developing countries is an expensive and inconvenient process - often requiring recipients to travel for hours to reach a physical bank and pay high fees when cashing out.</p><p>That’s where Taptap Send comes in. <a href="https://www.taptapsend.com/" target="_blank">Taptap Send</a> is the first consumer product from <a href="https://www.thesegovia.com/" target="_blank">Segovia Technology</a>, a financial services provider backed by Reid Hoffman. Taptap Send allows users to make instant, no fee transfers from a western bank account directly into a mobile money account.</p>
+		</div>
+		<div class="row mt-m" style="background-color: #B6E4C5;">
 			<img src="images/tts_logo.svg" class="col-12 col-md-6 offset-md-3 img-responsive">
 		</div>
-		<div class="col-12 col-md-8 offset-md-2">
-			<div class="text-align-center" style="margin-top: 2rem;">
-				<p class="caption">Taptap Send branding by <a href="https://www.virginiasasser.com/" target="_blank" style="text-decoration: none">Virgina Sasser</a></p>
-			</div>
-			<p style="margin-top: 3rem;">In the past few years, <a href="https://www.economist.com/special-report/2018/05/03/how-mobile-money-is-spreading" target="_blank">mobile money</a> has become the predominant banking system for people living in emerging markets. However, transferring money from traditional financial institutions to developing countries is an expensive and inconvenient process. That’s where Taptap Send comes in. <a href="https://www.taptapsend.com/" target="_blank">Taptap Send</a> is the first consumer product from <a href="https://www.thesegovia.com/" target="_blank">Segovia Technology</a>, a financial services provider backed by Reid Hoffman. Taptap Send allows users to make instant, no fee transfers from a debit account to a mobile money account.</p>
+		<div class="col-12 col-md-8 offset-md-2 text-align-center mt-xs">
+			<p class="caption">Taptap Send branding by <a href="https://www.virginiasasser.com/" target="_blank" style="text-decoration: none">Virgina Sasser</a></p>
 		</div>
-		<div class="row">
-			<img src="images/tts_1.png" class="col-6 col-md-3 img-responsive" style="margin-top: 5rem;">
-			<img src="images/tts_2.png" class="col-6 col-md-3 img-responsive" style="margin-top: 5rem;">
-			<img src="images/tts_3.png" class="col-6 col-md-3 img-responsive" style="margin-top: 5rem;">
-			<img src="images/tts_4.png" class="col-6 col-md-3 img-responsive" style="margin-top: 5rem;">
-		</div>
-		<div class="rowcol-12 col-md-8 offset-md-2" style="margin-top: 5rem;">
-			<p>I partnered with the Taptap Send team for 4 months in 2018 to launch the iOS & Android apps in the UK & France. Our primary audiences for launch were Zambian and Ivorian immigrants (living in the UK & France) who wished to send money back home.</p>
+		<div class="rowcol-12 col-md-8 offset-md-2 mt-m">
+			<p>I partnered with the Taptap Send team for 4 months in 2018 to launch the iOS & Android apps in the UK & France. Our initial audiences were Zambian and Ivorian immigrants (living in the UK & France) who intended to send money back home.</p>
 			<p>As an embedded member of the team I worked closely with product managers and lawyers to define requirements. I also partnered with a user researcher, based in the UK, who collected feedback from immigrant communities on early prototypes.</p>
 		</div>
-		<div class="row" style="margin-top: 5rem;">
-			<div class="col-6 col-md-4 offset-md-2">
-				<video loop autoplay controls width="100%" poster="images/tts_onboarding_thumb.png">
-				  <source src="images/tts_onboarding.mov" type="video/mp4">
+		<div class="row mt-m">
+			<img src="images/tts_1.png" class="col-10 offset-1 col-md-4 offset-md-0 img-responsive">
+			<img src="images/tts_2.png" class="col-10 offset-1 col-md-4 offset-md-0 img-responsive">
+			<img src="images/tts_3.png" class="col-10 offset-1 col-md-4 offset-md-0 img-responsive">
+		</div>
+		<div class="col-12 col-md-8 offset-md-2 mt-m">
+			<p>The primary functions of Taptap Send are transactional: uploading personal & financial information, authoring transfers, and reviewing ledger details - so our team looked for small moments to create delightful interactions.</p>
+		</div>
+		<div class="row mt-m" style="background-color: #FBEEE5; padding: 5rem;">
+			<div class="col-10 offset-1 col-md-4 offset-md-4">
+				<video autoplay muted playsinline loop width="100%">
+					<source src="images/tts_onboarding.mov" type="video/mp4">
 				</video>
 			</div>
-			<div class="col-6 col-md-4">
-				<video loop autoplay controls width="100%" poster="images/tts_onboarding_thumb.png">
-				  <source src="images/tts_onboarding.mov" type="video/mp4">
-				</video>
+		</div>
+		<div class="col-12 col-md-8 offset-md-2 text-align-center mt-xs">
+			<p class="caption">Onboarding Interaction</a></p>
+		</div>
+		<div class="col-12 col-md-8 offset-md-2 mt-m">
+			<p>We decided to use React Native to simplify cross-platform development. This allowed us to ship iOS & Android apps in rapid succession with limited component variation.</p>
+		</div>
+		<div class="row mt-m">
+			<div class="col-12 col-md-4 offset-md-2 text-align-center">
+				<p class="caption">Android</p>
+				<img src="images/tts_android_nav_1.png" class="width-100 mt-s">
+				<img src="images/tts_android_nav_2.png" class="width-100 mt-s">
+				<img src="images/tts_android_banner.png" class="width-100 mt-s">
+				<img src="images/tts_android_dialog.png" class="width-100 mt-s">
+			</div>
+			<div class="col-12 col-md-4 text-align-center">
+				<p class="caption">iOS</p>
+				<img src="images/tts_iOS_nav_1.png" class="width-100 mt-s">
+				<img src="images/tts_iOS_nav_2.png" class="width-100 mt-s">
+				<img src="images/tts_iOS_banner.png" class="width-100 mt-s">
+				<img src="images/tts_iOS_dialog.png" class="width-100 mt-s">
 			</div>
 		</div>
-		<div class="row col-12 col-md-8 offset-md-2" style="margin-top: 5rem;">
-			<p>Using React Native allowed our team to ship iOS & Android apps in rapid succession thanks to cross platform components.</p>
-		</div>
-		<div class="row" style="margin-top: 5rem; background-color: #B6E4C5;">
-			<img src="images/tts_logo.svg" class="col-12 col-md-6 offset-md-3 img-responsive">
-		</div>
-		<div class="row col-12 col-md-8 offset-md-2" style="margin-top: 5rem;">
+		<div class="col-12 col-md-8 offset-md-2 mt-m">
 			<p>Taptap Send has continued to grow over the past few months, processing hundreds of thousands of dollars in transfer volume, expanding to accommodate international business transfers, and offering additional countries for distribution.</p>
 			<p>If you are here because you need help conceiving, validating, or designing a product that makes the world a better place, say hi</p>
-			<a href="mailto:hi@denny.nyc" class="button">say hi</a>
+			<div class="mt-s"><a href="mailto:hi@denny.nyc" class="button">say hi</a></div>
 		</div>
-		<hr style="margin-top: 15rem;">
 		<div class="row">
-			<div class="col-6">
-				<a href="index.html" style="text-decoration: none">
-					<div class="back_btn">
-						<h3 class="back_arrow">&larr;</h3>
-					</div>
-				</a>
+			<div class="col-12 col-md-8 offset-md-2 mt-m">
+				<hr>
 			</div>
-			<div class="col-6 text-align-right">
+		</div>
+		<div class="row">
+			<div class="col-6 col-md-4 offset-md-2">
+				<a href="index.html" class="back_arrow_solo"><h2>&larr;</h2></a>
+			</div>
+			<div class="col-6 col-md-4 text-align-right">
 				<h3><a href="mailto:hi@denny.nyc">hi@denny.nyc</a></h3>
 			</div>
 		</div>

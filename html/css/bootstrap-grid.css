@@ -21,7 +21,7 @@ html {
 
 .container {
   width: 100%;
-  padding-top: 35%;
+  padding-top: 100px;
   padding-bottom: 15%;
   padding-right: 15px;
   padding-left: 15px;
@@ -32,7 +32,7 @@ html {
 
 .container-fluid {
   width: 100%;
-  padding-top: 35%;
+  padding-top: 20%;
   padding-bottom: 15%;
   padding-right: 15px;
   padding-left: 15px;
@@ -281,11 +281,11 @@ html {
 
 @media (min-width: 576px) {
 .container {
-  padding-top: 15%;
+  padding-top: 120px;
 }
 
 .container-fluid {
-  padding-top: 15%;
+  padding-top: 20%;
 }
 
   .col-sm {
@@ -460,6 +460,13 @@ html {
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding-top: 140px;
+  }
+
+  .container-fluid {
+    padding-top: 15%;
+  }  
   .col-md {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
