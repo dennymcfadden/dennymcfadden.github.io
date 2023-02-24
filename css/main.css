@@ -131,6 +131,7 @@ p {
   h1 { font-size: 3.2rem; }
   h2 { font-size: 2.0rem; }
   h3 { font-size: 2.0rem; }
+  h4 { font-size: 2.0rem; }
   p {  font-size: 1.6rem;}
 }
 
@@ -138,6 +139,7 @@ p {
   h1 { font-size: 3.6rem; }
   h2 { font-size: 2.0rem; }
   h3 { font-size: 2.0rem; }
+  h4 { font-size: 2.0rem; }
   p {  font-size: 1.6rem;}
 }
 
@@ -145,6 +147,7 @@ p {
   h1 { font-size: 3.8rem; }
   h2 { font-size: 2.2rem; }
   h3 { font-size: 2.0rem; }
+  h4 { font-size: 2.0rem; }
   p {  font-size: 1.6rem;}
 }
 
@@ -152,6 +155,7 @@ p {
   h1 { font-size: 3.8rem; }
   h2 { font-size: 2.2rem; }
   h3 { font-size: 2.2rem; }
+  h4 { font-size: 2.2rem; }
   p {  font-size: 1.8rem;}
 }
 
@@ -159,6 +163,7 @@ p {
   h1 { font-size: 3.8rem; }
   h2 { font-size: 2.2rem; }
   h3 { font-size: 2.2rem; }
+  h4 { font-size: 2.2rem; }
   p {  font-size: 1.8rem;}
 }
 
@@ -173,11 +178,17 @@ p {
 
 a {
   color: var(--off_white);
+    text-decoration-color: var(--off_white);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
   transition: all ease 0.3s;
 }
 
 a:hover {
   color: var(--white);
+  text-decoration-color: var(--white);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
   transition: all ease 0.3s;
 }
 
