@@ -1,12 +1,10 @@
 /* -------------------- Colors -------------------- */
 
 :root {
-  --black: #222120;
+  --black: #23221b;
   --white: #FFF;
-  --gray-0: #ececec;
-  --gray-1: #bfbfbf;
-  --gray-2: #757575;
-  --gray-3: #404040;
+  --off_white: #dddacb;
+  --gray-1: #757369;
   --blue: #0033FF;
   --dark-blue: #083EA7;
   --green: #17C37B;
@@ -26,7 +24,7 @@ hr {
 }
 
 .hr-gray {
-    border-top: 1px solid var(--gray-0);
+    border-top: 1px solid var(--gray-1);
 }
 
 /* -------------------- Social Bar -------------------- */
@@ -76,16 +74,16 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: var(--black);
+  font-family: 'Playfair Display', serif;
+  color: var(--off_white);
   font-size: 2em;
   line-height: 1.6;
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 /* -------------------- Type -------------------- */
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -93,67 +91,75 @@ h1, h2, h3, p {
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  color: var(--black);
-  font-size: 4rem;
-  line-height: 1.3;
-  margin-bottom: 4rem; 
+  font-size: 2.4rem;
+  line-height: 1.8;
 }
 
-h2 { 
-  font-family: 'Source Sans Pro', sans-serif;
+h2 {
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size: 2.2rem;
-  line-height: 1.6;
+  font-size: 2.4rem;
+  line-height: 1.8;
 }
 
 h3 { 
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  color: var(--gray-1);
 }
 
-p {
+h4 { 
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
+  line-height: 1.8;
+  color: var(--gray-1);
+  padding-bottom: 15px;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: 1.6;
   padding-bottom: 2.5rem;
 }
 
 @media (min-width: 550px) {
-  h1 { font-size: 6rem; }
-  h2 { font-size: 2.3rem; }
-  h3 { font-size: 1.8rem; }
-  p {   font-size: 1.8rem;}
+  h1 { font-size: 3.2rem; }
+  h2 { font-size: 2.0rem; }
+  h3 { font-size: 2.0rem; }
+  p {  font-size: 1.6rem;}
 }
 
-@media (min-width: 750px) {
-  h1 { font-size: 8rem; }
-  h2 { font-size: 2.4rem; }
-  h3 { font-size: 1.9rem; }
-  p { font-size: 1.9rem; }
+@media (min-width: 768px) {
+  h1 { font-size: 3.6rem; }
+  h2 { font-size: 2.0rem; }
+  h3 { font-size: 2.0rem; }
+  p {  font-size: 1.6rem;}
 }
 
 @media (min-width: 1000px) {
-  h1 { font-size: 10rem; }
-  h2 { font-size: 2.5rem; }
+  h1 { font-size: 3.8rem; }
+  h2 { font-size: 2.2rem; }
   h3 { font-size: 2.0rem; }
-  p { font-size: 2.0rem; }
+  p {  font-size: 1.6rem;}
 }
 
 @media (min-width: 1440px) {
-  h1 { font-size: 12rem; }
-  h2 { font-size: 2.5rem; }
-  h3 { font-size: 2.0rem; }
-  p { font-size: 2.0rem; }
+  h1 { font-size: 3.8rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 2.2rem; }
+  p {  font-size: 1.8rem;}
 }
 
 @media (min-width: 2000px) {
-  h1 { font-size: 12rem; }
-  h2 { font-size: 2.5rem; }
-  h3 { font-size: 2.0rem; }
-  p { font-size: 2.0rem; }
+  h1 { font-size: 3.8rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 2.2rem; }
+  p {  font-size: 1.8rem;}
 }
 
 .caption {
@@ -166,12 +172,12 @@ p {
 
 
 a {
-  color: var(--blue);
+  color: var(--off_white);
   transition: all ease 0.3s;
 }
 
 a:hover {
-  color: var(--dark-blue);
+  color: var(--white);
   transition: all ease 0.3s;
 }
 
