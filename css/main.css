@@ -5,6 +5,7 @@
   --white: #FFF;
   --off_white: #dddacb;
   --gray-1: #757369;
+  --gray-2: #5F5C52;
   --blue: #0033FF;
   --dark-blue: #083EA7;
   --green: #17C37B;
@@ -25,45 +26,6 @@ hr {
 
 .hr-gray {
     border-top: 1px solid var(--gray-1);
-}
-
-/* -------------------- Social Bar -------------------- */
-
-.socialbar {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 100;
-}
-
-.social-link {
-  float: left;
-  text-decoration: none;
-}
-
-@media (min-width: 550px) {
-  .socialbar {
-    top: 10px;
-    left: 10px;
-  }
-}
-
-.social-icon {
-    background: var(--black);
-    text-align: center;
-    width: 50px;
-    height: 48px;
-    padding: 13px;
-    text-decoration: none;
-    color: var(--white);
-    font-size: 90%;
-    transition: all ease 0.3s;
-}
-
-.social-icon:hover {
-    background: var(--blue);
-    color: var(--white);
-    transition: all ease 0.3s;
 }
 
 
@@ -200,21 +162,17 @@ a:hover {
   transition: all ease 0.3s;
 }
 
-a.button {
-  background-color: var(--blue);
-  color: var(--white);
+a.icon_button {
+  padding:12px 13px 10px 13px;
+  border-radius: 8px;
+  background-color: var(--gray-2);
+  color: var(--black);
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 12px 20px;
-  font-size: 1.5rem;
-  transition: all ease 0.3s;
-  font-weight: 700;
 }
 
-a.button:hover {
-  background-color: var(--dark-blue);
-  transition: all ease 0.3s;
+a.icon_button:hover {
+  background-color: var(--off_white);
+  transition: all ease 0.5s;
 }
 
 .block-label {
