@@ -5,7 +5,7 @@
   --white: #FFF;
   --off_white: #F0EAE2;
   --off_white-dark: #E1DDC7;
-  --gray-1: #828181;
+  --gray-1: #696868;
   --gray-2: #5F5C52;
   --earth: #ACA28A;
   --blue: #0033FF;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, p {
 h1 {
   font-family: 'OggText', serif;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   line-height: 1.8;
   color: var(--dark-green);
 }
