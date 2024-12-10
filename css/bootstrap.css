@@ -564,12 +564,16 @@ pre code {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 

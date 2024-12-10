@@ -282,6 +282,8 @@ html {
 @media (min-width: 576px) {
 .container {
   padding-top: 120px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .container-fluid {
@@ -462,6 +464,8 @@ html {
 @media (min-width: 768px) {
   .container {
     padding-top: 140px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .container-fluid {

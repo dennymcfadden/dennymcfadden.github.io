@@ -1,15 +1,17 @@
 /* -------------------- Colors -------------------- */
 
 :root {
-  --black: #23221b;
+  --black: #404040;
   --white: #FFF;
-  --off_white: #dddacb;
-  --gray-1: #757369;
+  --off_white: #F0EAE2;
+  --off_white-dark: #E1DDC7;
+  --gray-1: #828181;
   --gray-2: #5F5C52;
+  --earth: #ACA28A;
   --blue: #0033FF;
   --dark-blue: #083EA7;
   --green: #17C37B;
-  --dark-green: #0cb06c;
+  --dark-green: #0C3915;
 }
 
 /* -------------------- Elements -------------------- */
@@ -19,13 +21,22 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--earth);
     margin: 1em 0;
     padding: 0;
 }
 
-.hr-gray {
-    border-top: 1px solid var(--gray-1);
+.hr-section {
+    border-top: 1px solid var(--off_white-dark);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .hr-section {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
 }
 
 
@@ -36,11 +47,11 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'Playfair Display', serif;
-  color: var(--off_white);
+  font-family: 'AvenirNext', sans-serif;
+  color: var(--gray-1);
   font-size: 2em;
   line-height: 1.6;
-  background-color: var(--black);
+  background-color: var(--off_white);
 }
 
 /* -------------------- Type -------------------- */
@@ -53,7 +64,7 @@ body {
 
 @font-face {
   font-family: AvenirNext;
-  src: url(../fonts/AvenirNext-Medium.woff2);
+  src: url(../fonts/AvenirNext-Regular.otf);
 }
 
 h1, h2, h3, h4, p {
@@ -66,12 +77,14 @@ h1 {
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 1.8;
+  color: var(--dark-green);
 }
 
 h2 {
   font-family: 'OggText', serif;
   font-weight: 400;
   font-size: 2.4rem;
+  color: var(--dark-green);
 }
 
 h3 { 
@@ -90,7 +103,7 @@ h4 {
 }
 
 p {
-  font-family: 'OggText', serif;
+  font-family: 'AvenirNext', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.0;
@@ -147,16 +160,16 @@ p {
 
 
 a {
-  color: var(--off_white);
-    text-decoration-color: var(--off_white);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.2em;
+  color: var(--gray-1);
+  text-decoration-color: var(--gray-1);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
   transition: all ease 0.3s;
 }
 
 a:hover {
-  color: var(--white);
-  text-decoration-color: var(--white);
+  color: var(--black);
+  text-decoration-color: var(--dark-green);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.25em;
   transition: all ease 0.3s;
@@ -165,13 +178,13 @@ a:hover {
 a.icon_button {
   padding:12px 13px 10px 13px;
   border-radius: 8px;
-  background-color: var(--gray-2);
-  color: var(--black);
+  background-color: var(--earth);
+  color: var(--off_white);
   text-decoration: none;
 }
 
 a.icon_button:hover {
-  background-color: var(--off_white);
+  background-color: var(--dark-green);
   transition: all ease 0.5s;
 }
 
@@ -579,4 +592,83 @@ a.back_arrow_solo:hover {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
   }
+}
+
+
+/* -------------------- Bento Box -------------------- */
+
+.p-l-clear {padding-left:0px;}
+
+.p-l-clear-sm {padding-left:0px;}
+
+.bento_h_1 {
+  height: 60x;
+}
+
+.bento_h_2 {
+  height: 136px;
+}
+
+.bento_h_3 {
+  height: 212px;
+}
+
+.bento_h_4 {
+  height: 288px;
+}
+
+.bento_h_5 {
+  height: 364px;
+}
+
+.bento_h_6 {
+  height: 440px;
+}
+
+.bento_content {
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 16px;
+}
+
+@media (min-width: 550px) {
+}
+
+@media (min-width: 768px) {
+  .p-l-clear-lrg {padding-left:0px;}
+  .p-l-clear-sm {padding-left:15px;}
+  .bento_h_1 {height: 76px;}
+  .bento_h_2 {height: 168px;}
+  .bento_h_3 {height: 260px;}
+  .bento_h_4 {height: 352px;}
+  .bento_h_5 {height: 444px;}
+  .bento_h_6 {height: 536px;}
+}
+
+@media (min-width: 1000px) {
+  .bento_h_1 {height: 92px;}
+  .bento_h_2 {height: 200px;}
+  .bento_h_3 {height: 308px;}
+  .bento_h_4 {height: 416px;}
+  .bento_h_5 {height: 524px;}
+  .bento_h_6 {height: 632px;}
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (min-width: 2000px) {
+}
+
+@media (min-width: 550px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1000px) {
+}
+
+@media (min-width: 1440px) {
 }
