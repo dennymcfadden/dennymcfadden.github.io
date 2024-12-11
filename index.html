@@ -16,16 +16,30 @@
   <link href="fonts/ss-social-regular.css" rel="stylesheet" />
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- SimpleParallax.js -->
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@latest/dist/simpleParallax.min.js"></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GQR7RJYENQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GQR7RJYENQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-  gtag('config', 'G-GQR7RJYENQ');
-</script>
+	  gtag('config', 'G-GQR7RJYENQ');
+	</script>
+	<!-- SimpleParallax.js -->
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.parallax-image');
+            new simpleParallax(images, {
+                scale: 1.2,
+                orientation: 'up',
+                delay: 0.1,
+                transition: 'cubic-bezier(0,0,0,1)'
+            });
+        });
+    </script>
 <body>
 <div class="container">
 	<div class="row animated fadeInUp first">
@@ -50,8 +64,8 @@
 	</div>
 	<div class="row animated fadeInUp second" style="padding-top: 15px; padding-bottom: 15px;">
 			<div class="col-12 col-md-4">
-				<div class="bento_content bento_h_5" style="background: var(--earth); display: flex; align-items: flex-start; justify-content: center; padding-top: 10%;">
-					<img src="images/galileo_home.png" alt="A mock-up of Galileo's app homescreen" width="75%">
+				<div class="bento_content bento_h_5" style="background: var(--earth); display: flex; align-items: flex-start; justify-content: center; position: relative;">
+						<img src="images/galileo_home.png" alt="A mock-up of Galileo's app homescreen" class="parallax-image" width="75%" style="margin-top: 20%;">	
 				</div>
 				<div class="bento_content bento_h_2" style="background: #131238; display: flex; align-items: center; justify-content: center;">
 					<img src="images/galileo_logo.png" alt="Galileo's logo" width="40%">
@@ -95,8 +109,8 @@
 	</div>
 	<div class="row animated fadeInUp second" style="padding-top: 15px; padding-bottom: 15px;">
 			<div class="col-12 col-md-5">
-				<div class="bento_content bento_h_5" style="background: #1CA3FC; display: flex; align-items: flex-start; justify-content: center; padding-top: 10%;">
-					<img src="images/architizer_home.png" alt="A mock-up of Architizer's homepage" width="95%">
+				<div class="bento_content bento_h_5" style="background: #1CA3FC; display: flex; align-items: flex-start; justify-content: center; position: relative;">
+					<img src="images/architizer_home.png" alt="A mock-up of Architizer's homepage" class="parallax-image" width="75%" style="margin-top: 20%;">
 				</div>
 			</div>
 			<div class="col-12 col-md-7">
@@ -193,8 +207,8 @@
 	</div>
 	<div class="row animated fadeInUp second" style="padding-top: 15px; padding-bottom: 15px;">
 			<div class="col-12 col-md-8">
-				<div class="bento_content bento_h_6" style="background: #EDA500; display: flex; align-items: flex-start; justify-content: center; padding-top: 10%;">
-					<img src="images/cw_sahel.png" alt="A mock-up of the 2014 September Campaign homepage" width="80%">
+				<div class="bento_content bento_h_6" style="background: #EDA500; display: flex; align-items: flex-start; justify-content: center; position: relative;">
+					<img src="images/cw_sahel.png" alt="A mock-up of the 2014 September Campaign homepage" class="parallax-image" width="75%" style="margin-top: 20%;">
 				</div>
 			</div>
 			<div class="col-12 col-md-4 p-l-clear-lrg">
