@@ -1,16 +1,12 @@
 /* -------------------- Colors -------------------- */
 
 :root {
-  --black: #404040;
+  --black: #000;
   --white: #FFF;
   --off_white: #F0EAE2;
   --off_white-dark: #E1DDC7;
-  --gray-1: #696868;
-  --gray-2: #5F5C52;
+  --gray: #696868;
   --earth: #ACA28A;
-  --blue: #0033FF;
-  --dark-blue: #083EA7;
-  --green: #17C37B;
   --dark-green: #0C3915;
 }
 
@@ -48,7 +44,7 @@ html {
 }
 body {
   font-family: 'AvenirNext', sans-serif;
-  color: var(--gray-1);
+  color: var(--gray);
   font-size: 2em;
   line-height: 1.6;
   background-color: var(--off_white);
@@ -91,14 +87,14 @@ h3 {
   font-family: 'AvenirNext', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: var(--gray-1);
+  color: var(--gray);
 }
 
 h4 { 
   font-family: 'AvenirNext', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: var(--gray-1);
+  color: var(--gray);
   padding-bottom: 15px;
 }
 
@@ -150,25 +146,20 @@ p {
   p {  font-size: 1.8rem;}
 }
 
-.caption {
-    font-size: 1.6rem;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: var(--gray-2);
-}
 
 /* -------------------- Links -------------------- */
 
 
 a {
-  color: var(--gray-1);
-  text-decoration-color: var(--gray-1);
+  color: var(--gray);
+  text-decoration-color: var(--gray);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
   transition: all ease 0.3s;
 }
 
 a:hover {
-  color: var(--black);
+  color: var(--dark-green);
   text-decoration-color: var(--dark-green);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.25em;
@@ -198,55 +189,6 @@ a.icon_button:hover {
   font-size: 1.5rem;
   transition: all ease 0.3s;
   font-weight: 700;
-}
-
-a.project_link {
-  text-decoration: none;
-  color: var(--black);
-  transition: all ease 0.3s;
-}
-
-a.project_link:hover {
-  color: var(--blue);
-  transition: all ease 0.3s;
-}
-
-a.project_link_disabled {
-  text-decoration: none;
-  color: var(--gray-1);
-}
-
-a.project_link_disabled:hover {
-  color: var(--gray-1);
-}
-
-.back_btn {
-  background-color: var(--black);
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  transition: all ease 0.3s;
-}
-
-.back_btn:hover {
-  background-color: var(--blue);
-  transition: all ease 0.3s;
-}
-
-.back_arrow {
-  line-height: 4rem;
-  color: var(--white);
-}
-
-a.back_arrow_solo {
-  text-decoration: none;
-  color: var(--black);
-  transition: all ease 0.3s;
-}
-
-a.back_arrow_solo:hover {
-  color: var(--blue);
-  transition: all ease 0.3s;
 }
 
 .disabled-wrapper {
@@ -381,32 +323,8 @@ a.back_arrow_solo:hover {
 	}
 }
 
-/* -------------------- Utilities: Color -------------------- */
+/* -------------------- Utilities -------------------- */
 
-
-.text-gray-0 {
-  color: var(--gray-0);
-}
-
-.text-gray-2 {
-	color: var(--gray-2);
-}
-
-.text-gray-3 {
-  color: var(--gray-3);
-}
-
-.text-green {
-	color: var(--green);
-}
-
-.text-blue {
-	color: var(--blue);
-}
-
-.text-black {
-	color: var(--black);
-}
 
 .text-bold {
   font-weight: 700;
@@ -414,6 +332,12 @@ a.back_arrow_solo:hover {
 
 .text-small {
   font-size: 70%;
+}
+
+.img-fill {
+  min-width:100%;
+  min-height:100%;
+  object-fit:cover;
 }
 
 /* -------------------- Utilities: Display -------------------- */
@@ -630,6 +554,7 @@ a.back_arrow_solo:hover {
   overflow: hidden;
   text-align: center;
   margin-top: 16px;
+  display: flex;
 }
 
 @media (min-width: 550px) {
