@@ -48,6 +48,7 @@ body {
   font-size: 2em;
   line-height: 1.6;
   background-color: var(--off_white);
+  cursor: url('../images/cursor.ico'), default;
 }
 
 /* -------------------- Type -------------------- */
@@ -155,7 +156,7 @@ a {
   text-decoration-color: var(--gray);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
-  transition: all ease 0.3s;
+  transition: all ease 0.1s;
 }
 
 a:hover {
@@ -163,7 +164,8 @@ a:hover {
   text-decoration-color: var(--dark-green);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.25em;
-  transition: all ease 0.3s;
+  transition: all ease 0.1s;
+  cursor: url('../images/cursor_hover.ico'), default;
 }
 
 a.icon_button {
@@ -177,6 +179,7 @@ a.icon_button {
 a.icon_button:hover {
   background-color: var(--dark-green);
   transition: all ease 0.5s;
+  cursor: url('../images/cursor_hover.ico'), default;
 }
 
 .block-label {
