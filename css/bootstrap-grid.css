@@ -21,7 +21,7 @@ html {
 
 .container {
   width: 100%;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 15%;
   padding-right: 15px;
   padding-left: 15px;
@@ -281,7 +281,7 @@ html {
 
 @media (min-width: 576px) {
 .container {
-  padding-top: 110px;
+  padding-top: 40px;
   padding-right: 25px;
   padding-left: 25px;
 }
@@ -463,7 +463,7 @@ html {
 
 @media (min-width: 768px) {
   .container {
-    padding-top: 130px;
+    padding-top: 60px;
     padding-right: 50px;
     padding-left: 50px;
   }

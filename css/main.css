@@ -3,6 +3,7 @@
 :root {
   --black: #000;
   --white: #FFF;
+  --off_white-light: #f6f2ec;
   --off_white: #F0EAE2;
   --off_white-dark: #E1DDC7;
   --gray: #696868;
@@ -35,6 +36,10 @@ hr {
   }
 }
 
+nav {
+  padding-bottom: 40px;
+}
+
 
 /* -------------------- Base Styles -------------------- */
 
@@ -45,8 +50,8 @@ html {
 body {
   font-family: 'AvenirNext', sans-serif;
   color: var(--gray);
-  font-size: 2em;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 2.0;
   background-color: var(--off_white);
   cursor: url('../images/cursor.ico'), default;
 }
@@ -61,7 +66,14 @@ body {
 
 @font-face {
   font-family: AvenirNext;
+  font-weight: 400;
   src: url(../fonts/AvenirNext-Regular.otf);
+}
+
+@font-face {
+  font-family: AvenirNext;
+  font-weight: 600;
+  src: url(../fonts/avenir-next-medium.woff2);
 }
 
 h1, h2, h3, h4, p {
@@ -107,6 +119,13 @@ p {
   padding-bottom: 2.5rem;
 }
 
+li {
+  font-family: 'AvenirNext', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.0;
+}
+
 @media (min-width: 550px) {
   h1 { font-size: 3.2rem; }
   h2 { font-size: 2.0rem; }
@@ -137,6 +156,7 @@ p {
   h3 { font-size: 2.0rem; }
   h4 { font-size: 2.0rem; }
   p {  font-size: 1.8rem;}
+  li {  font-size: 1.8rem;}
 }
 
 @media (min-width: 2000px) {
@@ -198,6 +218,56 @@ a.icon_button:hover {
   display: inline-block;
   cursor: not-allowed;
 }
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: var(--dark-green);
+  text-decoration: none;
+  color: var(--white);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+  border-radius: .75rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+  background-color: var(--off_white-light);
+  text-decoration: underline;
+}
+
+.btn-inactive {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: var(--dark-green);
+  text-decoration: none;
+  color: var(--white);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+  border-radius: .75rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-inactive:hover, .btn:focus {
+  color: var(--white);
+}
+
 
 /* -------------------- Lightbox -------------------- */
 

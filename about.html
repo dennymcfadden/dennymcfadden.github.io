@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Denny.NYC</title>
+  <meta name="description" content="Denny McFadden - Digital Product Designer & Director">
+  <meta name="author" content="Denny McFadden">
+  <meta property="og:title" content="Denny McFadden" />
+  <meta property="og:type" content="Portfolio" />
+  <meta property="og:image" content="http://www.denny.nyc/images/headshot.jpg" />
+  <meta property="og:url" content="www.denny.nyc" />
+  <meta property="og:description" content="Digital Product Designer & Director" />
+
+
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate_slim.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- SimpleParallax.js -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@latest/dist/simpleParallax.min.js"></script>
+  <style>
+
+    .testimonials {
+      column-count: 1;
+      column-gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .testimonial {
+      background: none;
+      border-radius: 8px;
+      padding: 2rem;
+	  font-family: 'AvenirNext', sans-serif;
+	  font-size: 1.6rem;
+	  font-weight: 400;
+	  line-height: 1.5;
+	  color: var(--gray);
+	  background-color: var(--off_white-light);
+      box-shadow: none;
+      border: none;
+      break-inside: avoid;
+      margin-bottom: 2rem;
+      display: block;
+    }
+    .testimonial-text {
+	  padding-bottom: 10px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .testimonial-author img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .author-name {
+      font-weight: bold;
+	  font-family: OggText;
+	  color: var(--dark-green);
+      display: block;
+    }
+    .author-title {
+      font-size: 1.5rem;
+      display: block;
+    }
+    @media (min-width: 700px) {
+      .testimonials {
+        column-count: 2;
+      }
+    }
+    @media (min-width: 1000px) {
+      .testimonials {
+        column-count: 3;
+      }
+    }
+  </style>
+</head>
+	<!-- simpleanalytics.com -->
+	<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+	<!-- SimpleParallax.js -->
+	<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.parallax-image');
+            new simpleParallax(images, {
+                scale: 1.2,
+                orientation: 'up',
+                delay: 0.1,
+                transition: 'cubic-bezier(0,0,0,1)'
+            });
+        });
+    </script>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-xl-11">
+		  <nav class="d-flex justify-content-end align-items-center py-3">
+			<a href="index.html" class="btn" style="margin-right: 2rem; color: var(--dark-green); background-color: var(--off-white);">Work</a>
+			<a class="btn-inactive">About</a>
+		  </nav>
+		</div>
+	</div>
+	<div class="row animated fadeInUp first">
+		<div class="col-12 col-md-6 col-lg-6 order-2 order-md-1">
+			<h1>Thanks for stopping by</h1>
+			<p style="padding:25px 0 0 0">
+				I’ve always been a maker. In the summer as a kid, my mom would send me out with a brush and a bucket of water to “paint” the sidewalk in which I could be absorbed for hours. In high school, a <a href="https://www.baltimoresun.com/2024/06/21/art-teacher-made-a-big-difference/" target="_blank" rel="noopener">a great art teacher</a> sparked my love for drawing, which led to a BFA in Graphic Design. But it was a undergraduate HTML/CSS course—coinciding with the launch of the first iPhone—that instilled a passion for software as a medium. For the past 15 years, I’ve been building digital products at early-stage startups—using design to make complex things simple and nudge the world in a positive direction.<br><br>
+			Outside of work I pursue interests that combine teamwork, craft, and technology. Today you can find me:</p>
+			<ul>
+				<li>Competitive sailing (2024 <a href="https://www.bcya.com/organization" target="_blank" rel="noopener">BYCA</a> Champions)</li>
+				<li>Playing team sports:  basketball, soccer, and ice hockey</li>
+				<li>Drawing & painting at MICA (Maryland Institute College of Art)</li>
+				<li>Restoring our family’s 1894 townhome</li>
+			</ul>
+		</div>
+		<div class="d-none d-md-block col-md-1 col-lg-1 order-md-2"></div>
+		<div class="col-5 col-md-5 col-lg-4 order-1 order-md-3">
+			<img src="images/about_photo.png" alt="Photo of Denny & family." style="width: 100%;" />
+		</div>
+	</div>
+	<hr class="hr-section animated fadeInUp first">
+	<section class="testimonials animated fadeInUp second">
+		<div class="testimonial">
+		  <p class="testimonial-text">
+			Denny is a superb design thinker, leader, and builder. He has deep empathy and patience, an exceptional eye for both quality as well as what actually matters in great products and experiences. To top it off he's also a delight to work with as a colleague.
+		  </p>
+		  <div class="testimonial-author">
+			<img src="images/testimonials/Alexander.jpg" alt="Alexander Fabry" />
+			<span>
+			  <span class="author-name">Alexander Fabry</span>
+			  <span class="author-title">VP Product @ Noom</span>
+			</span>
+		  </div>
+		</div>
+		<div class="testimonial">
+			<p class="testimonial-text">
+			  Denny is an engineering team's dream. He possesses a comprehensive understanding of best practices and design languages across platforms, and understands how to apply those principles creatively. Denny's also a fantastic communicator and team player, and always has a crystal clear vision for clean, aesthetically pleasing, and  functional design.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Simon.jpg" alt="Simon Manning" />
+			  <span>
+				<span class="author-name">Simon Manning</span>
+				<span class="author-title">iOS Engineer @ Apple</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				I’ve had the chance to work with Denny at two companies and in both, he stood out—making the team, and me, better. He drove vision and craft when it was needed most, built a strong, thoughtful design culture, and led with clarity and high-impact execution.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Amos.jpg" alt="Alessandra Mosenifary" />
+			  <span>
+				<span class="author-name">Alessandra Mosenifar</span>
+				<span class="author-title">Head of Design @ Mercury</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				Denny is an excellent designer whose keen eye and creative perspective is always in high-demand. He approaches his work and life with a curiosity and warmth that is an invaluable addition to any team.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Deepa.jpg" alt="Deepa Subramaniam" />
+			  <span>
+				<span class="author-name">Deepa Subramaniam</span>
+				<span class="author-title">VP @ Adobe, prev CTO @ ACLU</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				Denny is an insights/abstraction wizard. His ability to take a complex set of ideas and distill them is fantastic.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Tom.png" alt=Tom Lee" />
+			  <span>
+				<span class="author-name">Tom Lee</span>
+				<span class="author-title">Founder/CEO @ Galileo & One Medical</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				Denny is a talented design leader who really understands marketing and business needs—and has a rare gift for managing stakeholders and keeping teams aligned.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Kevin.jpg" alt="Kevin Kwon" />
+			  <span>
+				<span class="author-name">Kevin Kwon</span>
+				<span class="author-title">Sr. Marketing Manager @ Amazon</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				While Denny’s incredible abilities offer him unlimited opportunities, he is driven to seek those that allow him to use his talents to make the world a better place. His work ethic, expertise and humble leadership style is unmatched.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Tucker.jpg" alt="Matt Tucker" />
+			  <span>
+				<span class="author-name">Matt Tucker</span>
+				<span class="author-title">Software Engineer @ Crux</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				There is one quote that stood out from Denny’s peer feedback: “Denny is exactly the person that you want as your manager”
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Geoff.jpg" alt="Geoff Hyde" />
+			  <span>
+				<span class="author-name">Geoff Hyde</span>
+				<span class="author-title">VP Product @ Galileo</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				Denny is very technical, and can easily pick up complex algorithmic or structural concepts. This is been especially helpful when engineers run into issues during the build phase, as Denny can clearly understand the problem and collaborate on a resolution. Denny is a strong communicator, both in documentation and presentations. Has made huge contributions to the success of Galileo and the organization simply would not be the same without him.
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Brian.jpg" alt="Brian Shi" />
+			  <span>
+				<span class="author-name">Brian Shi</span>
+				<span class="author-title">Director of Product @ WeightWatchers</span>
+			  </span>
+			</div>
+		  </div>
+		  <div class="testimonial">
+			<p class="testimonial-text">
+				Denny is great at distilling complex workflows or features into a simplified, easy to understand user experience. Every design review he comes fully armed with the context and clarity we need. He has a talent for bringing tough conversations back to reality, and a fortitude that gets us to the next level. I feel lucky to have Denny on our team!
+			</p>
+			<div class="testimonial-author">
+			  <img src="images/testimonials/Kristina.jpg" alt="Kristina Nolte" />
+			  <span>
+				<span class="author-name">Kristina Kahn</span>
+				<span class="author-title">Director of Product @ Equip Health</span>
+			  </span>
+			</div>
+		  </div>
+		<!-- Repeat .testimonial for each testimonial, changing content and images as needed -->
+	  </section>
+	  <hr class="hr-section animated fadeInUp second">
+	  <div class="row animated fadeInUp third">
+		<div class="d-none d-md-block col-md-2 col-lg-3"></div>
+		<div class="col-12 col-md-8 col-lg-6 d-flex flex-column align-items-center">
+			<div style="display: flex; align-items: center; gap: 3rem;">
+				<h2 style="text-align: center;">Baltimore City</h2>
+				<img src="images/commute.png" alt="" style="max-width: 200px;"/>
+				<h2 style="text-align: center;">New York City</h2>
+			</div>
+			<p style="padding:25px 0 0 0; text-align: center";>After living in New York City for 12 years, our family moved to Baltimore in 2023. I am currently in NYC roughly once a month—if you find yourself in either location and would like to connect, get in touch!</p>
+			<p style="padding-top: 4rem;">
+				<a href="mailto:hi@denny.nyc" target="_blank" style="padding-right: 25px;">Email</a>
+				<a href="https://www.linkedin.com/in/dennymcfadden/" target="_blank" style="padding-right: 25px;">LinkedIn</a>
+				<a href="https://drive.google.com/file/d/1fZK7ETt6TbCr8Tcqt3Rt3qbuMuQmUknd/view?usp=sharing" target="_blank" style="padding-right: 25px;">Resume</a>
+			</p>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
+
+
