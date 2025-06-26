@@ -610,6 +610,10 @@ a.icon_button:hover {
   height: 212px;
 }
 
+.bento_h_3_custom {
+  height: 288px;
+}
+
 .bento_h_4 {
   height: 288px;
 }
@@ -639,6 +643,7 @@ a.icon_button:hover {
   .bento_h_1 {height: 76px;}
   .bento_h_2 {height: 168px;}
   .bento_h_3 {height: 260px;}
+  .bento_h_3_custom {height: 260px;}
   .bento_h_4 {height: 352px;}
   .bento_h_5 {height: 444px;}
   .bento_h_6 {height: 536px;}
@@ -648,6 +653,7 @@ a.icon_button:hover {
   .bento_h_1 {height: 92px;}
   .bento_h_2 {height: 200px;}
   .bento_h_3 {height: 308px;}
+  .bento_h_3_custom {height: 308px;}
   .bento_h_4 {height: 416px;}
   .bento_h_5 {height: 524px;}
   .bento_h_6 {height: 632px;}
