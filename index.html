@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Page Needs -->
   <meta charset="utf-8">
   <title>Denny.NYC</title>
   <meta name="description" content="Denny McFadden - Digital Product Designer & Director">
@@ -11,247 +10,159 @@
   <meta property="og:image" content="http://www.denny.nyc/images/headshot.jpg" />
   <meta property="og:url" content="www.denny.nyc" />
   <meta property="og:description" content="Digital Product Designer & Director" />
-
-
-
-  <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/animate_slim.css">
-  <!-- Favicon -->
+  <meta name="theme-color" content="#fafafa">
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <!-- SimpleParallax.js -->
-  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@latest/dist/simpleParallax.min.js"></script>
+  <link rel="preload" href="fonts/gt-america/GT-America-Standard-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/gt-america/GT-America-Standard-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css?v=22">
+  <!-- simpleanalytics.com -->
+  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </head>
-	<!-- simpleanalytics.com -->
-	<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-	<!-- SimpleParallax.js -->
-	<script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const images = document.querySelectorAll('.parallax-image');
-            new simpleParallax(images, {
-                scale: 1.2,
-                orientation: 'up',
-                delay: 0.1,
-                transition: 'cubic-bezier(0,0,0,1)'
-            });
-        });
-    </script>
 <body>
-<div class="container">
-	<div class="row">
-		<div class="col-12 col-xl-11">
-		  <nav class="d-flex justify-content-end align-items-center py-3">
-			<a class="btn-inactive" style="margin-right: 2rem;">Work</a>
-			<a href="about.html" class="btn" style="color: var(--dark-green); background-color: var(--off-white);">About</a>
-		  </nav>
-		</div>
-	</div>
-	<div class="row animated fadeInUp first">
-		<div class="col-12 col-xl-11">
-			<h1>Hi, I'm Denny.</h1>
-			<h1 style="padding-top:25px;">I am a hands-on Digital Product Designer & Director, with a track record of helping impact-driven companies launch and grow. I’ve played an early role in shaping the following organizations:</h1>
-		</div>
-	</div>
-	<!-- Galileo Section -->
-	<hr class="hr-section animated fadeInUp first">
-	<div class="row animated fadeInUp first">
-		<div class="col-12 col-md-5 col-lg-4">
-			<h2>Galileo Health</h2>
-			<h3>Director of Product Design</h3>
-			<h4>2018 – Present</h4>
-		</div>
-		<div class="col-12 col-md-7 col-lg-8 col-xl-7">
-			<p>At <a href="https://www.galileo.io" target="_blank">Galileo</a> I work alongside a dream team of innovators (led by Tom Lee, founder of <a href="https://health.amazon.com/prime" target="_blank">One Medical</a>) to improve the quality & affordability of medical care for all. Joining as the founding product designer, I’ve helped grow the organization to a team of over 500.</p>
-			<p>I have contributed on multiple fronts: launching our brand in collaboration with Gin Lane, our patient-facing apps on <a href="https://apps.apple.com/us/app/galileo-health-medical-care/id1322601067" target="_blank">iOS</a> & <a href="https://play.google.com/store/apps/details?id=com.galileohealth.android" target="_blank">Android</a>, and an extensive suite of internal tools spanning clinical workflows, administrative task management, coding, billing, and automation.</p>
-			<p>As the organization has grown, I've built out our design team with both full-time employees and contractors—establishing a career ladder, hiring at multiple levels, and coaching team members to grow in their roles. Today, Galileo is available to millions of patients nationwide: in home, in our clinics, and digitally.</p>
-		</div>
-	</div>
-	<div class="row animated fadeInUp first" style="padding: 15px 0px 15px 0px;">
-			<div class="col-12 col-md-4">
-				<div class="bento_content bento_h_2" style="background: #131238; align-items: center; justify-content: center;">
-					<img src="images/galileo_logo.png" alt="Galileo's logo" width="40%">
-				</div>
-				<div class="row">
-					<div class="col-6 col-md-12">
-						<div class="bento_content bento_h_3_mobile_down" style="background: #BAC5CE; align-items: center; justify-content: center;">
-							<img src="images/galileo_book.png" alt="Galileo Brand Book" width="75%"">	
-						</div>	
-					</div>
-					<div class="col-6 col-md-12 p-l-clear-sm">
-						<div class="bento_content bento_h_3_mobile_down" style="background: #FFF; align-items: center; justify-content: center;">
-							<img src="images/galileo_team.png" alt="Galileo Providers" width="75%"">	
-						</div>
-					</div>
+<div class="layout">
+	<aside class="sidebar">
+		<section class="hero">
+			<h1 class="reveal" style="--delay: 80ms">Hi, I'm Denny.</h1>
+			<p data-stream>I am a hands-on Digital Product Designer &amp; Director, with a track record of helping impact-driven companies launch and grow. I’ve served as the founding product designer at pioneering organizations:<span class="org-list"><a class="inline-link" href="https://www.counselhealth.com/" target="_blank" rel="noopener">Counsel Health</a><a class="inline-link" href="https://www.galileo.io/" target="_blank" rel="noopener">Galileo Health</a><a class="inline-link" href="https://www.hillaryclinton.com/" target="_blank" rel="noopener">Hillary for America</a><a class="inline-link" href="https://www.charitywater.org/" target="_blank" rel="noopener">charity: water</a></span></p>
+		</section>
+		<footer class="footer reveal" style="--delay: 80ms">
+			<nav class="footer__links">
+				<a class="pill" href="https://www.linkedin.com/in/dennymcfadden/" target="_blank" rel="noopener">LinkedIn</a>
+				<a class="pill" href="mailto:hi@denny.nyc">hi@denny.nyc</a>
+			</nav>
+		</footer>
+	</aside>
+	<main class="content">
+		<section class="testimonials">
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is an insights/abstraction wizard. His ability to take a complex set of ideas and distill them is amazing.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Tom.png?v=2" alt="Tom Lee" loading="lazy" />
+					<span>
+						<span class="author-name">Tom Lee</span>
+						<span class="author-title">Founder/CEO @ One Medical</span>
+					</span>
 				</div>
 			</div>
-			<div class="col-12 col-md-8">
-				<div class="row">
-					<div class="col-6 p-l-clear-lrg">
-						<div class="bento_content bento_h_3" style="align-items: center; justify-content: center;">
-							<img src="images/galileo_van.jpg" alt="A photo of Galileo's delivery van" class="img-fill">
-						</div>
-					</div>
-					<div class="col-6 p-l-clear">
-						<div class="bento_content bento_h_3" style="background: #F8CF46; align-items: flex-start; justify-content: center">
-							<img src="images/galileo_app.png" class="parallax-image" alt="A mock-up of Galileo's app" width="75%" style="margin-top: 15%;">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 p-l-clear-lrg">
-						<div class="bento_content bento_h_5_mobile_down" style="background: #ACA28A; align-items: center; justify-content: center;">
-							<video width="70%" autoplay loop muted playsinline><source src="images/galileo_zodiac.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-						</div>
-					</div>
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is a superb design thinker, leader, and builder. He has deep empathy and patience, an exceptional eye for both quality as well as what actually matters in great products and experiences. To top it off he's also a delight to work with as a colleague.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Alexander.png?v=2" alt="Alexander Fabry" loading="lazy" />
+					<span>
+						<span class="author-name">Alexander Fabry</span>
+						<span class="author-title">SVP Product @ Noom</span>
+					</span>
 				</div>
 			</div>
-	</div>
-	<!-- Architizer -->
-	<hr class="hr-section animated fadeInUp first">
-	<div class="row animated fadeInUp first">
-		<div class="col-12 col-md-5 col-lg-4 col-xl-4">
-			<h2>Architizer</h2>
-			<h3>Design Director</h3>
-			<h4>2016 – 2018</h4>
-		</div>
-		<div class="col-12 col-md-7 col-lg-8 col-xl-7">
-			<p>Previously an editorial and events business, I joined <a href="https://www.architizer.com" target="_blank">Architizer</a> at an inflection point to launch our first B2B marketplace product.</p>
-			<p>I led a cross-functional team, spanning product design, brand design, and frontend engineering to launch an online marketplace that empowered architects to source innovative and sustainable building materials.</p>
-			<p>In 2017, our marketplace was trusted by some of the world's most renowned architecture firms (<a href="https://big.dk/" target="_blank">Bjarke Engels</a>, <a href="https://www.adjaye.com/" target="_blank">David Adjaye</a>, <a href="https://www.gensler.com/" target="_blank">Gensler</a>, <a href="https://perkinswill.com/" target="_blank">Perkins&Will</a>, etc.) to place products across 19 countries. Architizer was acquired by <a href="https://materialbank.com/" target="_blank">Material Bank</a> in 2023.</p>
-		</div>
-	</div>
-	<div class="row animated fadeInUp first" style="padding: 15px 0px 15px 0px;">
-			<div class="col-12 col-md-5">
-				<div class="bento_content bento_h_6" style="background: #1da3fd; align-items: flex-start; justify-content: center; position: relative;">
-					<img src="images/architizer_home.png" alt="A mock-up of Architizer's homepage" class="parallax-image" width="75%" style="margin-top: 15%;">
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is an excellent designer whose keen eye and creative perspective is always in high-demand. He approaches his work and life with a curiosity and warmth that is an invaluable addition to any team.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Deepa.png?v=2" alt="Deepa Subramaniam" loading="lazy" />
+					<span>
+						<span class="author-name">Deepa Subramaniam</span>
+						<span class="author-title">CTO @ ACLU</span>
+					</span>
 				</div>
 			</div>
-			<div class="col-12 col-md-7">
-				<div class="row">
-					<div class="col-6 col-md-5 p-l-clear-lrg">
-						<div class="bento_content bento_h_3_mobile_down" style="background: #000; align-items: center; justify-content: center;">
-							<img src="images/architizer_logo.svg" alt="Architizer's logo" width="50%">
-						</div>
-					</div>
-					<div class="col-6 col-md-7 p-l-clear">
-						<div class="bento_content bento_h_3_mobile_down" style="background: #d6d6d6; align-items: center; justify-content: center;">
-							<img src="images/architizer_books.png" alt="Architizer publications" width="80%">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 p-l-clear-lrg">
-						<div class="bento_content bento_h_3" style="background: #F8CF46; align-items: center; justify-content: center;">
-							<img src="images/architizer_office.jpg" alt="A photo of Architizer's office" class="img-fill">
-						</div>
-					</div>
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					I've had the chance to work with Denny at two companies and in both, he stood out—making the team, and me, better. He drove vision and craft when it was needed most, built a strong, thoughtful design culture, and led with clarity and high-impact execution.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Amos.png?v=2" alt="Alessandra Mosenifar" loading="lazy" />
+					<span>
+						<span class="author-name">Alessandra Mosenifar</span>
+						<span class="author-title">Head of Design @ Mercury</span>
+					</span>
 				</div>
 			</div>
-	</div>
-	<!-- Hillary For America -->
-	<hr class="hr-section animated fadeInUp first">
-	<div class="row animated fadeInUp first">
-		<div class="col-12 col-md-5 col-lg-4 col-xl-4">
-			<h2>Hillary For America</h2>
-			<h3>Product Design Lead</h3>
-			<h4>2015 – 2016</h4>
-		</div>
-		<div class="col-12 col-md-7 col-lg-8 col-xl-7">
-			<p>In 2015, I joined <a href="https://www.hillaryclinton.com/" target="_blank">Hillary For America</a> as the campaign's first product designer. During the primary election, I led a talented team of volunteer designers from across the country, before growing our in-house team for the general election.</p>
-			<p>Over 16 months, working tirelessly seven days a week, we designed and built custom software that empowered every aspect of the campaign—from voter registration and volunteer organizing to events and donations. Together, we launched 42 applications, helped raise $960 million, and contributed to earning 66 million votes—the 2nd most in US history at the time.</p>
-		</div>
-	</div>
-	<div class="row animated fadeInUp first" style="padding: 15px 0px 15px 0px;">
-			<div class="col-12 col-md-3">
-				<div class="row">
-					<div class="col-6 col-md-12">
-						<div class="bento_content bento_h_3" style="background: #003F87; align-items: center; justify-content: center;">
-							<img src="images/hfa_logo.svg" alt="The Hillary For America logo" width="50%">
-						</div>
-					</div>
-					<div class="col-6 col-md-12 p-l-clear-sm">
-						<div class="bento_content bento_h_4_mobile_down" style="background: #131238; align-items: flex-start; justify-content: center;">
-							<img src="images/hfa_convention.png" alt="A photo of the Hillary Clinton & Tim Kaine at the 2016 Democratic National Convention" class="img-fill">
-						</div>
-					</div>
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is an engineering team's dream. He possesses a comprehensive understanding of best practices and design languages across platforms, and understands how to apply those principles creatively. Denny's also a fantastic communicator and team player, and always has a crystal clear vision for clean, aesthetically pleasing, and  functional design.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Simon.png?v=2" alt="Simon Manning" loading="lazy" />
+					<span>
+						<span class="author-name">Simon Manning</span>
+						<span class="author-title">iOS Engineer @ Apple</span>
+					</span>
 				</div>
 			</div>
-			<div class="col-12 col-md-9">
-				<div class="row">
-					<div class="col-12 p-l-clear-lrg">
-						<div class="bento_content bento_h_4_mobile_down" style="background: #F8CF46 url('images/hfa_app_wide.png') center center / cover no-repeat; align-items: flex-start; justify-content: center;">
-							<img src="images/hfa_app.png" alt="A screenshot of the Hillary 2016 mobile app" class="parallax-image" width="50%" style="margin-top: 10%;">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-6 p-l-clear-lrg">
-						<div class="bento_content bento_h_3_mobile_down" style="background: #FFA300; align-items: flex-end; justify-content: center;">
-							<img src="images/hfa_iwv.png" alt="A screenshot of www.iwillvote.com" style="max-height: 90%; max-width: 90%; width: auto; height: auto;">
-						</div>
-					</div>
-					<div class="col-6 p-l-clear">
-						<div class="bento_content bento_h_3_mobile_down" style="align-items: flex-end; justify-content: right;">
-							<img src="images/hfa_team.jpg" alt="A photo of the Hillary For America design team" class="img-fill" style="object-position: right;">
-						</div>
-					</div>
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					There is one quote that stood out from Denny's peer feedback: "Denny is exactly the person that you want as your manager"
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Geoff.png?v=2" alt="Geoff Hyde" loading="lazy" />
+					<span>
+						<span class="author-name">Geoff Hyde</span>
+						<span class="author-title">VP Product @ Galileo Health</span>
+					</span>
 				</div>
 			</div>
-	</div>
-	<!-- Charity: Water -->
-	<hr class="hr-section animated fadeInUp first">
-	<div class="row animated fadeInUp first">
-		<div class="col-12 col-md-5 col-lg-4 col-xl-4">
-			<h2>charity: water</h2>
-			<h3>Product Design Lead</h3>
-			<h4>2012 – 2015</h4>
-		</div>
-		<div class="col-12 col-md-7 col-lg-8 col-xl-7">
-			<p>When I joined <a href="https://www.charitywater.org/" target="_blank">charity: water</a> as the organization’s first product designer they were already widely recognized for excellence in storytelling, installations and events.</p>
-			<p>This was during the early days of online crowd-funding and our team set out to create a best-in-class platform for grassroots campaigning. Together, we launched <a href="https://my.charitywater.org" target="_blank">my.charitywater.org</a> an industry-defining product that reimagined how individuals could fundraise and connect with the impact of their efforts.</p>
-			<p>While focused on fundraiser experience, donor experience, and impact reporting—our team's work ultimately helped provide sustainable water solutions for more than 5M people in 22 countries.</p>
-		</div>
-	</div>
-	<div class="row animated fadeInUp first" style="padding: 15px 0px 15px 0px;">
-			<div class="col-12 col-md-8">
-				<div class="bento_content bento_h_6" style="background: #839D94; align-items: flex-start; justify-content: center; position: relative;">
-					<img src="images/cw_sahel.png" alt="A mock-up of the 2014 September Campaign homepage" class="parallax-image" width="75%" style="margin-top: 10%;">
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is great at distilling complex workflows or features into a simplified, easy to understand user experience. Every design review he comes fully armed with the context and clarity we need. He has a talent for bringing tough conversations back to reality, and a fortitude that gets us to the next level. I feel lucky to have Denny on our team!
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Kristina.png?v=2" alt="Kristina Kahn" loading="lazy" />
+					<span>
+						<span class="author-name">Kristina Kahn</span>
+						<span class="author-title">Director of Product @ Equip Health</span>
+					</span>
 				</div>
 			</div>
-			<div class="col-12 col-md-4 p-l-clear-lrg">
-				<div class="row">
-					<div class="col-6 col-md-12">
-						<div class="bento_content bento_h_2" style="background: #000; align-items: center; justify-content: center;">
-							<img src="images/cw_logo.svg" alt="The charity: water logo" width="60%">
-						</div>
-					</div>
-					<div class="col-6 col-md-12 p-l-clear-sm">
-						<div class="bento_content bento_h_2" style="background: #F8CF46; align-items: center; justify-content: center;">
-							<img src="images/cw_dirty.jpg" alt="A photo of a boy comparing clean and dirty drinking water" class="img-fill">
-						</div>
-					</div>
-				</div>
-				<div class="bento_content bento_h_2" style="background: #BCC5CD; align-items: flex-center; justify-content: center;">
-					<img src="images/cw_nyse.jpg" alt="A photo of Denny McFadden on the day charity: water rang the NYSE closing bell" class="img-fill">
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is very technical, and can easily pick up complex algorithmic or structural concepts. This is been especially helpful when engineers run into issues during the build phase, as Denny can clearly understand the problem and collaborate on a resolution. Denny is a strong communicator, both in documentation and presentations. Has made huge contributions to the success of Galileo and the organization simply would not be the same without him.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Brian.png?v=2" alt="Brian Shi" loading="lazy" />
+					<span>
+						<span class="author-name">Brian Shi</span>
+						<span class="author-title">Director of Product @ WeightWatchers</span>
+					</span>
 				</div>
 			</div>
-	</div>
-	<!-- Footer -->
-	<hr class="hr-section animated fadeInUp first">	
-	<div class="row animated fadeInUp first">
-		<div class="col-12 col-md-10 col-lg-10 col-xl-8">			
-			<p><h1>Thank you for your time. If you would like to connect, send me an email.</h1></p>
-			<p>
-				<a href="mailto:hi@denny.nyc" target="_blank" style="padding-right: 25px;">Email</a>
-				<a href="https://www.linkedin.com/in/dennymcfadden/" target="_blank" style="padding-right: 25px;">LinkedIn</a>
-				<a href="https://drive.google.com/file/d/1fZK7ETt6TbCr8Tcqt3Rt3qbuMuQmUknd/view?usp=sharing" target="_blank" style="padding-right: 25px;">Resume</a>
-			</p>
-		</div>
-	</div>
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					Denny is a talented design leader who really understands marketing and business needs—and has a rare gift for managing stakeholders and keeping teams aligned.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Kevin.png?v=2" alt="Kevin Kwon" loading="lazy" />
+					<span>
+						<span class="author-name">Kevin Kwon</span>
+						<span class="author-title">Sr. Marketing Manager @ Amazon</span>
+					</span>
+				</div>
+			</div>
+			<div class="testimonial reveal">
+				<p class="testimonial-text">
+					While Denny's incredible abilities offer him unlimited opportunities, he is driven to seek those that allow him to use his talents to make the world a better place. His work ethic, expertise and humble leadership style is unmatched.
+				</p>
+				<div class="testimonial-author">
+					<img src="images/testimonials/Tucker.png?v=2" alt="Matt Tucker" loading="lazy" />
+					<span>
+						<span class="author-name">Matt Tucker</span>
+						<span class="author-title">Software Engineer @ Crux</span>
+					</span>
+				</div>
+			</div>
+		</section>
+		<div class="scroll-fade" aria-hidden="true"></div>
+	</main>
 </div>
+<script src="js/masonry.js?v=22"></script>
+<script src="js/stream.js?v=22"></script>
+<script src="js/reveal.js?v=22"></script>
+<script src="js/scroll-fade.js?v=22"></script>
+<script src="js/tilt.js?v=22"></script>
 </body>
 </html>
