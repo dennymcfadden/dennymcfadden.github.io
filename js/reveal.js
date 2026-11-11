@@ -28,11 +28,15 @@
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       var el = entry.target;
+      observer.unobserve(el);
       if (el.classList.contains('testimonial')) {
-        el.style.setProperty('--delay', (wait + batch++ * CARD_STAGGER) + 'ms');
+        // Wait with a timer rather than a CSS transition-delay: masonry.js may move
+        // cards between columns when the web fonts arrive (often late on phones), and
+        // moving an element cancels its pending transition, so it would pop in early.
+        setTimeout(function () { show(el); }, wait + batch++ * CARD_STAGGER);
+        return;
       }
       show(el);
-      observer.unobserve(el);
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
 
