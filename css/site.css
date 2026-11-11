@@ -38,6 +38,7 @@
   --radius-md: 20px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --gutter: clamp(16px, 4vw, 40px);
 }
 
@@ -382,6 +383,17 @@ a {
   margin-left: -16px;
 }
 
+/* Stacked layout: inset the pills from the screen edge and clear the bottom of the phone */
+@media (max-width: 899px) {
+  .footer {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .footer__links {
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 900px) {
   .footer {
     margin-top: 32px;
@@ -408,11 +420,17 @@ a {
   filter: none;
 }
 
-/* Cards: keep the reveal fade, but give transform the slower, softer hover timing */
+/* Cards: a quicker, lighter reveal (paced like dmcg.co's images); transform keeps
+   the slower, softer timing so hover still glides */
+.testimonial.reveal:not(.is-visible) {
+  transform: translateY(10px);
+  filter: blur(6px);
+}
+
 .testimonial.reveal {
   transition:
-    opacity 0.9s var(--ease),
-    filter 0.9s var(--ease),
+    opacity 0.6s var(--ease-standard),
+    filter 0.6s var(--ease-standard),
     transform 0.7s var(--ease-soft);
   transition-delay: var(--delay, 0ms);
 }
