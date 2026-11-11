@@ -32,14 +32,80 @@
   --ink-2: #5f5f5f;
   --ink-3: #9a9a9a;
   --line: rgba(0, 0, 0, 0.06);
+  --hover: rgba(0, 0, 0, 0.05);           /* pill and link hover fill */
+  --glow-1: rgba(0, 0, 0, 0.05);          /* soft blurred glow behind the page */
+  --glow-2: rgba(0, 0, 0, 0.035);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.03), 0 18px 40px -12px rgba(0, 0, 0, 0.12);
+  color-scheme: light;
   --radius-lg: 28px;
   --radius-md: 20px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --gutter: clamp(16px, 4vw, 40px);
+}
+
+/* Dark theme: Counsel-style blue-purple base with light type.
+   Follows the system setting unless the visitor picks a theme with the sun/moon
+   toggle, which sets data-theme on <html> (see the script in index.html's head). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c2741;
+    --surface: #263354;
+    --surface-hover: #263354;
+    --ink: #f8f8f6;
+    --ink-2: #b8bfcf;
+    --ink-3: #8592ae;
+    --line: rgba(255, 255, 255, 0.08);
+    --hover: rgba(255, 255, 255, 0.08);
+    --glow-1: rgba(52, 68, 103, 0.7);
+    --glow-2: rgba(85, 106, 140, 0.25);
+    --shadow-sm: 0 1px 2px rgba(5, 10, 25, 0.25);
+    --shadow-lg: 0 2px 4px rgba(5, 10, 25, 0.2), 0 18px 40px -12px rgba(5, 10, 25, 0.6);
+  }
+  /* No JS: scrollbars and form controls follow the system too */
+  :root:not([data-scheme]) {
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1c2741;
+  --surface: #263354;
+  --surface-hover: #263354;
+  --ink: #f8f8f6;
+  --ink-2: #b8bfcf;
+  --ink-3: #8592ae;
+  --line: rgba(255, 255, 255, 0.08);
+  --hover: rgba(255, 255, 255, 0.08);
+  --glow-1: rgba(52, 68, 103, 0.7);
+  --glow-2: rgba(85, 106, 140, 0.25);
+  --shadow-sm: 0 1px 2px rgba(5, 10, 25, 0.25);
+  --shadow-lg: 0 2px 4px rgba(5, 10, 25, 0.2), 0 18px 40px -12px rgba(5, 10, 25, 0.6);
+}
+
+/* Browser-drawn parts (scrollbar, overscroll area) can't fade, so js/theme.js flips
+   data-scheme halfway through the color fade rather than at the start */
+:root[data-scheme="dark"] {
+  color-scheme: dark;
+}
+
+/* Switching themes: colors cross-fade for a moment instead of snapping (js/theme.js) */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition:
+    background-color 0.4s var(--ease-standard),
+    border-color 0.4s var(--ease-standard),
+    color 0.4s var(--ease-standard),
+    box-shadow 0.4s var(--ease-standard) !important;
+}
+
+/* ...except the sun/moon, which keep their own swap animation */
+.theme-transition .theme-toggle svg {
+  transition: opacity 0.3s var(--ease-soft), transform 0.5s var(--ease-soft) !important;
 }
 
 *,
@@ -65,18 +131,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Soft gray glow behind the intro, blurred */
-body::before {
+/* Soft glow behind the intro, blurred. Two layers, each a flat color shaped by a
+   radial mask: unlike a gradient, a flat color can fade when the theme changes. */
+body::before,
+body::after {
   content: "";
   position: fixed;
   inset: -20vh -10vw auto;
   height: 70vh;
-  background:
-    radial-gradient(40% 50% at 25% 40%, rgba(0, 0, 0, 0.05), transparent 70%),
-    radial-gradient(35% 45% at 80% 20%, rgba(0, 0, 0, 0.035), transparent 70%);
   filter: blur(40px);
   pointer-events: none;
   z-index: -1;
+}
+
+body::before {
+  background-color: var(--glow-1);
+  -webkit-mask-image: radial-gradient(40% 50% at 25% 40%, #000, transparent 70%);
+  mask-image: radial-gradient(40% 50% at 25% 40%, #000, transparent 70%);
+}
+
+body::after {
+  background-color: var(--glow-2);
+  -webkit-mask-image: radial-gradient(35% 45% at 80% 20%, #000, transparent 70%);
+  mask-image: radial-gradient(35% 45% at 80% 20%, #000, transparent 70%);
 }
 
 a {
@@ -150,7 +227,7 @@ a {
 }
 
 .pill:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--hover);
   color: var(--ink);
 }
 
@@ -231,7 +308,7 @@ a {
 }
 
 .inline-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--hover);
 }
 
 .inline-link:hover::after {
@@ -275,27 +352,42 @@ a {
   margin: 0 0 28px;
   padding: 28px;
   border-radius: var(--radius-lg);
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
-  backface-visibility: hidden;
-  will-change: transform;
+  isolation: isolate;
 }
 
-/* The hover shadow lives on its own layer and fades in, which is smoother than animating box-shadow */
+/* The card's surface and shadows live on pseudo-element layers behind the text.
+   On hover only these tilt; the text just lifts, so it never gets rotated and
+   stays sharp through the whole animation. */
+.testimonial::before,
 .testimonial::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   border-radius: inherit;
+  pointer-events: none;
+  transition: transform 0.7s var(--ease-soft), opacity 0.7s var(--ease-soft);
+}
+
+.testimonial::before {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+/* The hover shadow fades in, which is smoother than animating box-shadow */
+.testimonial::after {
   box-shadow: var(--shadow-lg);
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.7s var(--ease-soft);
+}
+
+.testimonial:hover {
+  transform: translateY(-6px);
 }
 
 /* --tilt is picked at random on each hover by js/tilt.js */
-.testimonial:hover {
-  transform: translateY(-6px) rotate(var(--tilt, -0.6deg));
+.testimonial:hover::before,
+.testimonial:hover::after {
+  transform: rotate(var(--tilt, -0.6deg));
 }
 
 .testimonial:hover::after {
@@ -343,18 +435,21 @@ a {
   margin-top: calc(-1 * clamp(140px, 22vh, 220px));
   pointer-events: none;
   z-index: 2;
-  background: linear-gradient(
-    to bottom,
-    rgba(250, 250, 250, 0) 0%,
-    rgba(250, 250, 250, 0.55) 45%,
-    rgba(250, 250, 250, 0.92) 80%,
-    var(--bg) 100%
-  );
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 60%);
   mask-image: linear-gradient(to bottom, transparent, #000 60%);
   transition: opacity 0.6s var(--ease);
+}
+
+/* The fade's color: flat --bg shaped by a gradient mask, so it can fade with the theme */
+.scroll-fade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.92) 80%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.92) 80%, #000 100%);
 }
 
 .scroll-fade.is-hidden {
@@ -383,10 +478,177 @@ a {
   margin-left: -16px;
 }
 
-/* Stacked layout: inset the pills from the screen edge and clear the bottom of the phone */
+/* Contact: copies the email address; a hint beside it says what will happen */
+
+.contact {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact__hint {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  display: grid;
+  margin-left: 12px;
+  font-size: 13px;
+  color: var(--ink-3);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-4px, -50%);
+  filter: blur(2px);
+  transition:
+    opacity 0.35s var(--ease-soft),
+    transform 0.35s var(--ease-soft),
+    filter 0.35s var(--ease-soft);
+}
+
+.contact:hover .contact__hint,
+.contact__button:focus-visible + .contact__hint,
+.contact.is-copied .contact__hint {
+  opacity: 1;
+  transform: translate(0, -50%);
+  filter: none;
+}
+
+/* The two labels share one spot and crossfade */
+.contact__label {
+  grid-area: 1 / 1;
+  transition: opacity 0.25s var(--ease-soft);
+}
+
+.contact__label--copied {
+  opacity: 0;
+  color: var(--ink);
+}
+
+.contact.is-copied .contact__label--copy {
+  opacity: 0;
+}
+
+.contact.is-copied .contact__label--copied {
+  opacity: 1;
+}
+
+/* After "copied!" while the pointer is still on Contact: hide the hint until the
+   pointer leaves and comes back (js/contact.js) */
+.contact.is-resting .contact__hint {
+  opacity: 0;
+  transform: translate(-4px, -50%);
+  filter: blur(2px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Footer controls: theme (sun/moon) and sound (speaker) at the right end of the footer */
+
+.footer__controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.icon-toggle svg {
+  grid-area: 1 / 1;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: opacity 0.3s var(--ease-soft);
+}
+
+.icon-toggle .wave, .icon-toggle .stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.icon-toggle:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+
+.icon-toggle:active {
+  transform: scale(0.94);
+}
+
+.icon-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.sound-toggle[aria-pressed="true"] .sound-toggle__off,
+.sound-toggle[aria-pressed="false"] .sound-toggle__on {
+  opacity: 0;
+}
+
+/* Sun shows in light mode, moon in dark; they turn slightly as they swap */
+.theme-toggle svg {
+  transition: opacity 0.3s var(--ease-soft), transform 0.5s var(--ease-soft);
+}
+
+.theme-toggle .theme-toggle__moon {
+  width: 16px;
+  height: 16px;
+}
+
+:root[data-theme="dark"] .theme-toggle__sun,
+:root:not([data-theme="dark"]) .theme-toggle__moon {
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.8);
+}
+
+/* Without JS there's no data-theme, so follow the system setting */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-toggle__sun {
+    opacity: 0;
+  }
+  :root:not([data-theme]) .theme-toggle__moon {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Sounds only play on mouse hover, so there's nothing to turn off on touch screens */
+@media (hover: none) {
+  .sound-toggle {
+    display: none;
+  }
+}
+
+/* Stacked layout: the footer sticks to the bottom of the screen, sitting on the solid
+   end of the scroll fade, with the pills inset from the edge and clear of the phone's
+   home bar. No divider line, since it floats over the cards while scrolling. */
 @media (max-width: 899px) {
   .footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
     padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    border-top: 0;
   }
 
   .footer__links {
@@ -486,7 +748,9 @@ a {
     transition: none;
   }
   .testimonial,
-  .testimonial:hover {
+  .testimonial:hover,
+  .testimonial:hover::before,
+  .testimonial:hover::after {
     transform: none;
   }
 }
