@@ -357,9 +357,7 @@ a {
   isolation: isolate;
 }
 
-/* The card's surface and shadows live on pseudo-element layers behind the text.
-   On hover only these tilt; the text just lifts, so it never gets rotated and
-   stays sharp through the whole animation. */
+/* The card's surface and shadows sit on layers behind the text */
 .testimonial::before,
 .testimonial::after {
   content: "";
@@ -368,7 +366,7 @@ a {
   z-index: -1;
   border-radius: inherit;
   pointer-events: none;
-  transition: transform 0.7s var(--ease-soft), opacity 0.7s var(--ease-soft);
+  transition: opacity 0.7s var(--ease-soft);
 }
 
 .testimonial::before {
@@ -380,16 +378,6 @@ a {
 .testimonial::after {
   box-shadow: var(--shadow-lg);
   opacity: 0;
-}
-
-.testimonial:hover {
-  transform: translateY(-6px);
-}
-
-/* --tilt is picked at random on each hover by js/tilt.js */
-.testimonial:hover::before,
-.testimonial:hover::after {
-  transform: rotate(var(--tilt, -0.6deg));
 }
 
 .testimonial:hover::after {
@@ -684,8 +672,8 @@ a {
   filter: none;
 }
 
-/* Cards: a quicker, lighter reveal (paced like dmcg.co's images); transform keeps
-   the slower, softer timing so hover still glides */
+/* Cards: a quicker, lighter reveal (paced like dmcg.co's images). Movement keeps
+   the slower, softer timing so the hover lift still glides. */
 .testimonial.reveal:not(.is-visible) {
   transform: translateY(10px);
   filter: blur(6px);
@@ -697,6 +685,11 @@ a {
     filter 0.6s var(--ease-standard),
     transform 0.7s var(--ease-soft);
   transition-delay: var(--delay, 0ms);
+}
+
+/* Hover lifts the card; it doesn't tilt, since rotating text blurs it mid-animation */
+.testimonial.reveal.is-visible:hover {
+  transform: translateY(-6px);
 }
 
 /* Description streams in word by word (spans added by js/stream.js) */
@@ -749,10 +742,7 @@ a {
     filter: none;
     transition: none;
   }
-  .testimonial,
-  .testimonial:hover,
-  .testimonial:hover::before,
-  .testimonial:hover::after {
+  .testimonial.reveal.is-visible:hover {
     transform: none;
   }
 }
