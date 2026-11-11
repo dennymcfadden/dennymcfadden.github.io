@@ -16,19 +16,20 @@
   }
 
   // On first load: title + footer, then the description streams in, then the company list.
-  // stream.js sets how long the first cards wait; they then stagger.
+  // No card may start before cardsStartAt (set from stream.js's timing), however it comes
+  // into view — on load, after a quick scroll, or when a phone reopens the page part way down.
   var INITIAL_CARD_DELAY = parseInt(document.documentElement.dataset.cardDelay, 10) || 780;
-  var firstCards = true;
+  var CARD_STAGGER = 60; // ms between cards that come into view together
+  var cardsStartAt = performance.now() + INITIAL_CARD_DELAY;
 
   var observer = new IntersectionObserver(function (entries) {
     var batch = 0;
-    var offset = firstCards ? INITIAL_CARD_DELAY : 0;
+    var wait = Math.max(0, Math.round(cardsStartAt - performance.now()));
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       var el = entry.target;
       if (el.classList.contains('testimonial')) {
-        el.style.setProperty('--delay', (offset + batch++ * 90) + 'ms');
-        firstCards = false;
+        el.style.setProperty('--delay', (wait + batch++ * CARD_STAGGER) + 'ms');
       }
       show(el);
       observer.unobserve(el);
