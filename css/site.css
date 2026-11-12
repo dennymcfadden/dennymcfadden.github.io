@@ -91,16 +91,45 @@
   color-scheme: dark;
 }
 
-/* Switching themes: colors cross-fade for a moment instead of snapping (js/theme.js) */
-.theme-transition,
-.theme-transition *,
-.theme-transition *::before,
-.theme-transition *::after {
+/* Switching themes: colors cross-fade for a moment instead of snapping (js/theme.js).
+   The color tokens themselves fade, once, on <html>; every element reads them through
+   var(), so text, backgrounds and borders all sit at the same point in the fade.
+   (Fading color on each element instead makes text lag: color is inherited, so every
+   nested element restarts its own fade from its parent's in-between value.) */
+@property --bg { syntax: "<color>"; inherits: true; initial-value: #fafafa; }
+@property --surface { syntax: "<color>"; inherits: true; initial-value: #ffffff; }
+@property --surface-hover { syntax: "<color>"; inherits: true; initial-value: #ffffff; }
+@property --ink { syntax: "<color>"; inherits: true; initial-value: #1a1a1a; }
+@property --ink-2 { syntax: "<color>"; inherits: true; initial-value: #5f5f5f; }
+@property --ink-3 { syntax: "<color>"; inherits: true; initial-value: #9a9a9a; }
+@property --line { syntax: "<color>"; inherits: true; initial-value: rgba(0, 0, 0, 0.06); }
+@property --hover { syntax: "<color>"; inherits: true; initial-value: rgba(0, 0, 0, 0.05); }
+@property --glow-1 { syntax: "<color>"; inherits: true; initial-value: rgba(0, 0, 0, 0.05); }
+@property --glow-2 { syntax: "<color>"; inherits: true; initial-value: rgba(0, 0, 0, 0.035); }
+
+:root.theme-transition {
   transition:
-    background-color 0.4s var(--ease-standard),
-    border-color 0.4s var(--ease-standard),
-    color 0.4s var(--ease-standard),
-    box-shadow 0.4s var(--ease-standard) !important;
+    --bg 0.4s var(--ease-standard),
+    --surface 0.4s var(--ease-standard),
+    --surface-hover 0.4s var(--ease-standard),
+    --ink 0.4s var(--ease-standard),
+    --ink-2 0.4s var(--ease-standard),
+    --ink-3 0.4s var(--ease-standard),
+    --line 0.4s var(--ease-standard),
+    --hover 0.4s var(--ease-standard),
+    --glow-1 0.4s var(--ease-standard),
+    --glow-2 0.4s var(--ease-standard);
+}
+
+/* Elements' own color transitions would trail the tokens, so they're paused during
+   the switch. Shadows aren't tokens that can fade, so they fade per element. */
+.theme-transition body,
+.theme-transition body *,
+.theme-transition body *::before,
+.theme-transition body *::after,
+.theme-transition body::before,
+.theme-transition body::after {
+  transition: box-shadow 0.4s var(--ease-standard) !important;
 }
 
 /* ...except the sun/moon, which keep their own swap animation */
