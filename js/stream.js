@@ -5,10 +5,10 @@
   if (!desc) return;
 
   var START = 280;      // ms after load, once the headline is on its way in
-  var STEP = 32;        // ms between words
-  var GAP = 160;        // pause between the description and the company list
-  var ITEM_PAUSE = 90;  // extra beat before each company name
-  var ARROW_LAG = 120;  // arrow fades in just after its company's last word
+  var STEP = 25.6;      // ms between words (32 / 1.25)
+  var GAP = 128;        // pause between the description and the company list
+  var ITEM_PAUSE = 72;  // extra beat before each company name
+  var ARROW_LAG = 96;   // arrow fades in just after its company's last word
 
   var t = START;
 
